@@ -5,11 +5,11 @@ podTemplate(containers: [containerTemplate(name: 'maven', image: 'maven:3.6.3-jd
         }
         stage('build') {
             container('maven') {
-                sh 'mvn -B -ntp -Dmaven.test.failure.ignore verify'
+                sh 'mvn -B -ntp -Dmaven.test.failure.ignore verify | tee log.txt'
             }
         }
         stage('publish') {
-            recordIssues(tools: [javaDoc()])
+            recordIssues(tools: [javaDoc(pattern: 'log.txt')])
             junit '**/target/surefire-reports/TEST-*.xml'
         }
     }
