@@ -11,7 +11,7 @@ public class StandardMetaObjectReflectorFactoryImpl implements AbstractMetaObjec
     private static final Logger LOGGER = Logger.getLogger(StandardMetaObjectReflectorFactoryImpl.class.getName());
 
     public StandardMetaObjectReflectorFactoryImpl() {
-        LOGGER.info("constructing a standard implementation of the blah blah blah");
+        LOGGER.info("constructing a standard implementation of the thing that constructs other stuff");
     }
 
     @Override
