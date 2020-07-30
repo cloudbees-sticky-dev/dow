@@ -7,7 +7,7 @@ public class StandardMetaObjectReflectorFactoryImplTest {
 
     @Test
     public void produce_is_valid() {
-        assertNull(new StandardMetaObjectReflectorFactoryImpl().produce());
+        assertNotNull(new StandardMetaObjectReflectorFactoryImpl().produce(), "should produce something");
     }
 
 }
