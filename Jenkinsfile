@@ -5,7 +5,9 @@ podTemplate(containers: [containerTemplate(name: 'maven', image: 'maven:3.6.3-jd
         }
         stage('build') {
             container('maven') {
-                sh 'mvn -B -ntp -Dmaven.test.failure.ignore verify | tee log.txt'
+                tee('log.txt') {
+                    sh 'mvn -B -ntp -Dmaven.test.failure.ignore verify'
+                }
             }
         }
         stage('publish') {
