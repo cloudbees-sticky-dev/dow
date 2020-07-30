@@ -1,2 +1,1 @@
-# dow
-DevOpsWorld demo
+DevOpsWorld demo repository.
