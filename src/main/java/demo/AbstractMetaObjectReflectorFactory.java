@@ -7,6 +7,7 @@ public interface AbstractMetaObjectReflectorFactory {
 
     /**
      * Produces an object.
+     * @return a new object or null
      */
     Object produce();
 
