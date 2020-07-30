@@ -15,7 +15,7 @@ public class StandardMetaObjectReflectorFactoryImpl implements AbstractMetaObjec
     }
 
     @Override
-    public Object produce() {
+    public Object produce(boolean force) {
         return null;
     }
 
